@@ -12,37 +12,60 @@
       <p>Built with HTML, CSS, JavaScript and - of course - lots of love!</p>
     </header>
     <main>
-      <div>
-        <h2>Player 1</h2>
-        <p>PLAYER NAME</p>
-        <p>X</p>
-        <a href="#overlay">Edit</a>
-      </div>
-      <div>
-        <h2>Player 2</h2>
-        <p>PLAYER NAME</p>
-        <p>O</p>
-        <a href="#overlay">Edit</a>
-      </div>
-      <button>Start New Game</button>
-      <div>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <aside id="overlay">
+        <h2>Choose your name</h2>
+        <form>
+          <div>
+            <label for="player-name">Player name</label>
+            <input type="text" name="player-name" id="player-name" />
+          </div>
+          <div>
+            <button type="button" href="#">Cancel</button>
+            <button type="submit">Confirm</button>
+          </div>
+        </form>
+      </aside>
+      <section id="game-configuration">
+        <ol>
+          <li>
+            <article>
+              <h2>Player 1</h2>
+              <h3>PLAYER NAME</h3>
+              <p>X</p>
+              <button href="#overlay">Edit</button>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h2>Player 2</h2>
+              <h3>PLAYER NAME</h3>
+              <p>O</p>
+              <button href="#overlay">Edit</button>
+            </article>
+          </li>
+        </ol>
+        <button>Start New Game</button>
+      </section>
+      <section id="active-game">
+        <article>
+          <h3>You won, <span id="winning-player"></span>!</h3>
+          <p>Click "Start New Game above, to start a new game!</p>
+        </article>
+        <p>It's your turn <span id="active-player-name"></span>!</p>
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+
+          <li></li>
+          <li></li>
+          <li></li>
+
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </section>
     </main>
-    <aside id="overlay">
-      <h2>Choose your name</h2>
-      <label for="">Player name</label>
-      <input type="text" />
-      <a href="#">Cancel</a>
-      <button>Confirm</button>
-    </aside>
   </body>
 </html>
