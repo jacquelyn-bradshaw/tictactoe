@@ -4,10 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/overall.css" />
     <title>Tic Tac Toe</title>
   </head>
   <body>
-    <header>
+    <header id="main-header">
       <h1>Play Tic, Tac, Toe</h1>
       <p>Built with HTML, CSS, JavaScript and - of course - lots of love!</p>
     </header>
@@ -20,7 +27,9 @@
             <input type="text" name="player-name" id="player-name" />
           </div>
           <div>
-            <button type="button" href="#">Cancel</button>
+            <button type="button" class="button-alternative" href="#">
+              Cancel
+            </button>
             <button type="submit">Confirm</button>
           </div>
         </form>
@@ -32,7 +41,7 @@
               <h2>Player 1</h2>
               <h3>PLAYER NAME</h3>
               <p>X</p>
-              <button href="#overlay">Edit</button>
+              <button class="button-alternative" href="#overlay">Edit</button>
             </article>
           </li>
           <li>
@@ -40,7 +49,7 @@
               <h2>Player 2</h2>
               <h3>PLAYER NAME</h3>
               <p>O</p>
-              <button href="#overlay">Edit</button>
+              <button class="button-alternative" href="#overlay">Edit</button>
             </article>
           </li>
         </ol>
