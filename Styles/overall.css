@@ -5,7 +5,7 @@ body {
   background-color: rgb(247, 239, 247);
 }
 
-#main-header {
+.main-header {
   background-color: rgb(140, 0, 255);
   color: white;
   padding: 2rem 5%;
