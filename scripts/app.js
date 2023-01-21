@@ -11,17 +11,17 @@ const players = [
   },
 ];
 
-const editPlayer1Button = document.querySelector(".edit-player1-button");
-const editPlayer2Button = document.querySelector(".edit-player2-button");
+const editPlayer1Button = document.getElementById("edit-player1-button");
+const editPlayer2Button = document.getElementById("edit-player2-button");
 
-const cancelConfigButton = document.querySelector(".cancel-config-button");
+const cancelConfigButton = document.getElementById("cancel-config-button");
 
-const overlayAsideElement = document.querySelector(".modal");
-const backdropElement = document.querySelector(".backdrop");
+const overlayAsideElement = document.getElementById("modal-element");
+const backdropElement = document.getElementById("backdrop-element");
 
-const formElement = document.querySelector("form");
+const formElement = document.getElementById("config-form");
 
-const playerValidationParagraph = document.querySelector(".config-errors");
+const playerValidationParagraph = document.getElementById("config-errors");
 
 editPlayer1Button.addEventListener("click", openPlayerConfig);
 editPlayer2Button.addEventListener("click", openPlayerConfig);

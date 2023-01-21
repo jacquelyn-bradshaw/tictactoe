@@ -20,22 +20,22 @@
     <title>Noughts and Crosses</title>
   </head>
   <body>
-    <div class="backdrop"></div>
+    <div class="backdrop" id="backdrop-element"></div>
     <header class="main-header">
       <h1>Play Noughts and Crosses</h1>
       <p>Built with HTML, CSS, JavaScript</p>
     </header>
     <main>
-      <aside class="modal overlay">
+      <aside class="modal overlay" id="modal-element">
         <h2>Choose your name</h2>
-        <form>
+        <form id="config-form">
           <div class="form-input">
             <label for="player-name">Player name</label>
-            <input type="text" name="player-name" id="player-name" required />
+            <input type="text" name="player-name" id="player-name" required maxlength="20" />
           </div>
-          <p class="config-errors"></p>
+          <p id="config-errors"></p>
           <div>
-            <button type="reset" class="button-alternative cancel-config-button">
+            <button type="reset" class="button-alternative" id="cancel-config-button">
               Cancel
             </button>
             <button type="submit">Confirm</button>
@@ -45,19 +45,19 @@
       <section class="game-configuration">
         <ol>
           <li>
-            <article class="player1-data">
+            <article id="player1-data">
               <h2>Player 1</h2>
               <h3>PLAYER NAME</h3>
               <p class="player-symbol">X</p>
-              <button class="button-alternative edit-player1-button" data-playerid="1">Edit</button>
+              <button class="button-alternative" id="edit-player1-button" data-playerid="1">Edit</button>
             </article>
           </li>
           <li>
-            <article class="player2-data">
+            <article id="player2-data">
               <h2>Player 2</h2>
               <h3>PLAYER NAME</h3>
               <p class="player-symbol">O</p>
-              <button class="button-alternative edit-player2-button" data-playerid="2">Edit</button>
+              <button class="button-alternative" id="edit-player2-button" data-playerid="2">Edit</button>
             </article>
           </li>
         </ol>
