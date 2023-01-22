@@ -23,6 +23,10 @@ const formElement = document.getElementById("config-form");
 
 const playerValidationParagraph = document.getElementById("config-errors");
 
+const startGameButton = document.getElementById("start-game");
+const activeGameSection = document.getElementById("game-started");
+const playerNameAlertModal = document.getElementById("player-name-alert");
+
 editPlayer1Button.addEventListener("click", openPlayerConfig);
 editPlayer2Button.addEventListener("click", openPlayerConfig);
 
@@ -30,3 +34,5 @@ backdropElement.addEventListener("click", closePlayerConfig);
 cancelConfigButton.addEventListener("click", closePlayerConfig);
 
 formElement.addEventListener("submit", savePlayerConfig);
+
+startGameButton.addEventListener("click", startNewGame);

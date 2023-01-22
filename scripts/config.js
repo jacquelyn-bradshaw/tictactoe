@@ -1,5 +1,6 @@
 function openPlayerConfig(event) {
   editedPlayer = parseInt(event.target.dataset.playerid);
+  playerNameAlertModal.style.display = "none";
   overlayAsideElement.style.display = "block";
   backdropElement.style.display = "block";
 }

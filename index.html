@@ -42,6 +42,9 @@
           </div>
         </form>
       </aside>
+      <aside class="modal overlay" id="player-name-alert">
+        <p>Please set custom player names for both players!</p>
+      </aside>
       <section class="game-configuration">
         <ol>
           <li>
@@ -61,9 +64,9 @@
             </article>
           </li>
         </ol>
-        <button>Start New Game</button>
+        <button id="start-game">Start New Game</button>
       </section>
-      <section class="active-game">
+      <section class="active-game" id="game-started">
         <article class="game-over">
           <h2>You won, <span class="winning-player"></span>!</h3>
           <p>Click "Start New Game above, to start a new game!</p>
