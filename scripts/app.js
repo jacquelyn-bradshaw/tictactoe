@@ -1,4 +1,5 @@
 let editedPlayer = 0;
+let activePlayer = 0;
 
 const players = [
   {
@@ -11,6 +12,7 @@ const players = [
   },
 ];
 
+//config variables
 const editPlayer1Button = document.getElementById("edit-player1-button");
 const editPlayer2Button = document.getElementById("edit-player2-button");
 
@@ -23,10 +25,16 @@ const formElement = document.getElementById("config-form");
 
 const playerValidationParagraph = document.getElementById("config-errors");
 
+//active game variables
 const startGameButton = document.getElementById("start-game");
 const activeGameSection = document.getElementById("game-started");
 const playerNameAlertModal = document.getElementById("player-name-alert");
 
+const playerTurnElement = document.getElementById("active-player-name-element");
+
+const gameBoardElements = document.querySelectorAll("#game-board-element li");
+
+//config event listeners
 editPlayer1Button.addEventListener("click", openPlayerConfig);
 editPlayer2Button.addEventListener("click", openPlayerConfig);
 
@@ -35,4 +43,9 @@ cancelConfigButton.addEventListener("click", closePlayerConfig);
 
 formElement.addEventListener("submit", savePlayerConfig);
 
+//active game listeners
 startGameButton.addEventListener("click", startNewGame);
+
+for (const gameBoardElement of gameBoardElements) {
+  gameBoardElement.addEventListener("click", selectGameField);
+}
