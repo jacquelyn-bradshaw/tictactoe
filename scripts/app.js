@@ -12,6 +12,12 @@ const players = [
   },
 ];
 
+const gameData = [
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0],
+];
+
 //config variables
 const editPlayer1Button = document.getElementById("edit-player1-button");
 const editPlayer2Button = document.getElementById("edit-player2-button");

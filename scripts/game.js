@@ -16,8 +16,19 @@ function switchPlayer() {
 }
 
 function selectGameField(event) {
+  const column = parseInt(event.target.dataset.col);
+  const row = parseInt(event.target.dataset.row);
+
+  if (gameData[row][column] > 0) {
+    return;
+  }
+
   event.target.textContent = players[activePlayer].symbol;
   event.target.classList.add("disabled");
+  
+  gameData[row][column] = activePlayer + 1;
+  console.log(gameData);
+  
   switchPlayer();
   playerTurnElement.textContent = players[activePlayer].name;
 }
