@@ -1,6 +1,7 @@
 let editedPlayer = 0;
 let activePlayer = 0;
 let currentRound = 1;
+let gameIsOver = false;
 
 const players = [
   {
@@ -13,7 +14,7 @@ const players = [
   },
 ];
 
-const gameData = [
+let gameData = [
   [0, 0, 0],
   [0, 0, 0],
   [0, 0, 0],
@@ -40,6 +41,9 @@ const playerNameAlertModal = document.getElementById("player-name-alert");
 const playerTurnElement = document.getElementById("active-player-name-element");
 
 const gameBoardElements = document.querySelectorAll("#game-board-element li");
+
+const gameOverArticle = document.getElementById("game-over-element");
+const gameOverHeading = document.getElementById("game-over-heading");
 
 //config event listeners
 editPlayer1Button.addEventListener("click", openPlayerConfig);
