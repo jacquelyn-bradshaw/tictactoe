@@ -1,3 +1,20 @@
+let activePlayer = 0;
+let currentRound = 1;
+let gameIsOver = false;
+
+let gameData = [
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0],
+];
+
+const activeGameSection = document.getElementById("game-started");
+
+const playerTurnElement = document.getElementById("active-player-name-element");
+
+const gameOverArticle = document.getElementById("game-over-element");
+const gameOverHeading = document.getElementById("game-over-heading");
+
 function startNewGame() {
   if (players[0].name === "" || players[1].name === "") {
     playerNameAlertModal.style.display = "block";
