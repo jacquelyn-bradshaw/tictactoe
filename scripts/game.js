@@ -27,11 +27,7 @@ function startNewGame() {
 }
 
 function switchPlayer() {
-  if (activePlayer === 0) {
-    activePlayer = 1;
-  } else {
-    activePlayer = 0;
-  }
+  activePlayer = activePlayer === 0 ? 1 : 0
 }
 
 function selectGameField(event) {
@@ -107,11 +103,7 @@ function endGame(winnerId) {
   const winningPlayerName = document.getElementById("winning-player-name");
   gameIsOver = true;
   gameOverArticle.style.display = "block";
-  if (winnerId > 0) {
-    winningPlayerName.textContent = players[winnerId - 1].name;
-  } else {
-    gameOverHeading.textContent = "It's a draw!"
-  }
+  winnerId > 0 ? winningPlayerName.textContent = players[winnerId - 1].name : gameOverHeading.textContent = "It's a draw!"
 }
 
 function resetGameStatus() {
