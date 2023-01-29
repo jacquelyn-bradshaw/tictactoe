@@ -1,5 +1,12 @@
+let editedPlayer = 0;
+
+const overlayAsideElement = document.getElementById("modal-element");
+
+const playerValidationParagraph = document.getElementById("config-errors");
+
 function openPlayerConfig(event) {
   editedPlayer = parseInt(event.target.dataset.playerid);
+  playerNameAlertModal.style.display = "none";
   overlayAsideElement.style.display = "block";
   backdropElement.style.display = "block";
 }

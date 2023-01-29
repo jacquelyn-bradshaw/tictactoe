@@ -31,16 +31,29 @@
         <form id="config-form">
           <div class="form-input">
             <label for="player-name">Player name</label>
-            <input type="text" name="player-name" id="player-name" required maxlength="20" />
+            <input
+              type="text"
+              name="player-name"
+              id="player-name"
+              required
+              maxlength="20"
+            />
           </div>
           <p id="config-errors"></p>
           <div>
-            <button type="reset" class="button-alternative" id="cancel-config-button">
+            <button
+              type="reset"
+              class="button-alternative"
+              id="cancel-config-button"
+            >
               Cancel
             </button>
             <button type="submit">Confirm</button>
           </div>
         </form>
+      </aside>
+      <aside class="modal overlay" id="player-name-alert">
+        <p>Please set custom player names for both players!</p>
       </aside>
       <section class="game-configuration">
         <ol>
@@ -49,7 +62,13 @@
               <h2>Player 1</h2>
               <h3>PLAYER NAME</h3>
               <p class="player-symbol">X</p>
-              <button class="button-alternative" id="edit-player1-button" data-playerid="1">Edit</button>
+              <button
+                class="button-alternative"
+                id="edit-player1-button"
+                data-playerid="1"
+              >
+                Edit
+              </button>
             </article>
           </li>
           <li>
@@ -57,30 +76,46 @@
               <h2>Player 2</h2>
               <h3>PLAYER NAME</h3>
               <p class="player-symbol">O</p>
-              <button class="button-alternative" id="edit-player2-button" data-playerid="2">Edit</button>
+              <button
+                class="button-alternative"
+                id="edit-player2-button"
+                data-playerid="2"
+              >
+                Edit
+              </button>
             </article>
           </li>
         </ol>
-        <button>Start New Game</button>
+        <button id="start-game">Start New Game</button>
       </section>
-      <section class="active-game">
-        <article class="game-over">
-          <h2>You won, <span class="winning-player"></span>!</h3>
+      <section class="active-game" id="game-started">
+        <article class="game-over" id="game-over-element">
+          <h2 id="game-over-heading">
+            You won,
+            <span class="winning-player" id="winning-player-name"></span>!
+          </h2>
           <p>Click "Start New Game above, to start a new game!</p>
         </article>
-        <p>It's your turn <span class="active-player-name"></span>!</p>
-        <ol class="game-board">
-          <li></li>
-          <li></li>
-          <li></li>
+        <p>
+          It's your turn
+          <span
+            class="active-player-name"
+            id="active-player-name-element"
+          ></span
+          >!
+        </p>
+        <ol class="game-board" id="game-board-element">
+          <li data-col="0" data-row="0"></li>
+          <li data-col="1" data-row="0"></li>
+          <li data-col="2" data-row="0"></li>
 
-          <li></li>
-          <li></li>
-          <li></li>
+          <li data-col="0" data-row="1"></li>
+          <li data-col="1" data-row="1"></li>
+          <li data-col="2" data-row="1"></li>
 
-          <li></li>
-          <li></li>
-          <li></li>
+          <li data-col="0" data-row="2"></li>
+          <li data-col="1" data-row="2"></li>
+          <li data-col="2" data-row="2"></li>
         </ol>
       </section>
     </main>
