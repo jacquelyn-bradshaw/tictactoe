@@ -20,7 +20,11 @@
     <title>Noughts and Crosses</title>
   </head>
   <body>
-    <div class="backdrop" id="backdrop-element"></div>
+    <div
+      onclick="closePlayerConfig()"
+      class="backdrop"
+      id="backdrop-element"
+    ></div>
     <header class="main-header">
       <h1>Play Noughts and Crosses</h1>
       <p>Built with HTML, CSS, JavaScript</p>
@@ -28,7 +32,7 @@
     <main>
       <aside class="modal overlay" id="modal-element">
         <h2>Choose your name</h2>
-        <form id="config-form">
+        <form onsubmit="savePlayerConfig(event)" id="config-form">
           <div class="form-input">
             <label for="player-name">Player name</label>
             <input
@@ -42,6 +46,7 @@
           <p id="config-errors"></p>
           <div>
             <button
+              onclick="closePlayerConfig()"
               type="reset"
               class="button-alternative"
               id="cancel-config-button"
@@ -63,6 +68,7 @@
               <h3>PLAYER NAME</h3>
               <p class="player-symbol">X</p>
               <button
+                onclick="openPlayerConfig(event)"
                 class="button-alternative"
                 id="edit-player1-button"
                 data-playerid="1"
@@ -77,6 +83,7 @@
               <h3>PLAYER NAME</h3>
               <p class="player-symbol">O</p>
               <button
+                onclick="openPlayerConfig(event)"
                 class="button-alternative"
                 id="edit-player2-button"
                 data-playerid="2"
@@ -86,7 +93,7 @@
             </article>
           </li>
         </ol>
-        <button id="start-game">Start New Game</button>
+        <button onclick="startNewGame()" id="start-game">Start New Game</button>
       </section>
       <section class="active-game" id="game-started">
         <article class="game-over" id="game-over-element">
@@ -105,17 +112,17 @@
           >!
         </p>
         <ol class="game-board" id="game-board-element">
-          <li data-col="0" data-row="0"></li>
-          <li data-col="1" data-row="0"></li>
-          <li data-col="2" data-row="0"></li>
+          <li onclick="selectGameField(event)" data-col="0" data-row="0"></li>
+          <li onclick="selectGameField(event)" data-col="1" data-row="0"></li>
+          <li onclick="selectGameField(event)" data-col="2" data-row="0"></li>
 
-          <li data-col="0" data-row="1"></li>
-          <li data-col="1" data-row="1"></li>
-          <li data-col="2" data-row="1"></li>
+          <li onclick="selectGameField(event)" data-col="0" data-row="1"></li>
+          <li onclick="selectGameField(event)" data-col="1" data-row="1"></li>
+          <li onclick="selectGameField(event)" data-col="2" data-row="1"></li>
 
-          <li data-col="0" data-row="2"></li>
-          <li data-col="1" data-row="2"></li>
-          <li data-col="2" data-row="2"></li>
+          <li onclick="selectGameField(event)" data-col="0" data-row="2"></li>
+          <li onclick="selectGameField(event)" data-col="1" data-row="2"></li>
+          <li onclick="selectGameField(event)" data-col="2" data-row="2"></li>
         </ol>
       </section>
     </main>
